@@ -5,8 +5,9 @@ This repository holds the input cases for validation of MPACT with several criti
 
 ## Results to be published:
 
-"VERA-CS Validation of Critical Experiments"
-Vincent Novellino and Scott Palmtag
-accepted to: PHYSOR 2020
+  "VERA-CS Validation of Critical Experiments"
+  Vincent Novellino and Scott Palmtag
+  accepted to: PHYSOR 2020   
+  https://www.physor2020.com
 
 
