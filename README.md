@@ -1,2 +1,12 @@
 # Critical-Experiment-Validation
-Validation cases
+
+This repository holds the input cases for validation of MPACT with several critical facilities
+
+
+## Results to be published:
+
+"VERA-CS Validation of Critical Experiments"
+Vincent Novellino and Scott Palmtag
+accepted to: PHYSOR 2020
+
+
