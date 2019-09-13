@@ -1,0 +1,133 @@
+! The values in this input used the following references as a guideline:
+!
+! 1. Hoovler et al., "Critical Experiments Supporting Close Proximity Water
+!    Storage of Power Reactor Fuel," BAW-1484-7, July 1979.
+!
+[CASEID]
+  title 'BW 1484 Core I 2D'
+
+[STATE]
+  power  0.0
+  tfuel  21 C    ! [Ref. 1, pg 8-5]
+  tinlet 21 C    ! [Ref. 1, pg 8-5]
+  modden 0.998   ! g/cc
+  boron  0       ! ppm [Ref. 1, pg 8-5]
+  sym full
+
+[CORE]
+  size 2
+  apitch 19.632
+  rated 0.01 0.01
+  height 1.0
+
+  mat alum61 2.70 Al-27 0.972
+                  Cr-00 0.00195
+                  Cu-63 0.00275
+                  Fe-00 0.0058
+                  Mg-00 0.01
+                  Mn-55 0.00075
+                  Si-00 0.006
+                  Ti-00 0.00075
+
+  core_shape ! [Ref. 1, pg 8-26]
+    1 1
+    1 1
+
+  assm_map ! [Ref. 1, pg 8-26]
+    ANW ANE
+    ASW ASE
+
+  bc_top reflecting
+  bc_bot reflecting
+
+  baffle mod 0.2 3.072    ! total width is two pin pitches
+
+[ASSEMBLY]
+  title  "BW Core I Assembly"
+  npin      12
+  ppitch 1.636
+
+  fuel U246  10.22 94.5 / 2.459     ! [Ref. 1, pg 8-2]
+
+  cell 1  0.515 0.522 0.603 0.810 / U246 he alum61 mod  ! [Ref. 1, pg 8-2]
+  cell 2              0.603 0.810 / mod mod
+
+  ! [Ref. 1, pg 8-26]
+  lattice LATNW
+      2 2 2 2 2 2 2 2 2 2 1 1
+      2 2 2 2 2 2 2 1 1 1 1 1
+      2 2 2 2 2 1 1 1 1 1 1 1
+      2 2 2 2 1 1 1 1 1 1 1 1
+      2 2 2 1 1 1 1 1 1 1 1 1
+      2 2 1 1 1 1 1 1 1 1 1 1
+      2 2 1 1 1 1 1 1 1 1 1 1
+      2 1 1 1 1 1 1 1 1 1 1 1
+      2 1 1 1 1 1 1 1 1 1 1 1
+      1 1 1 1 1 1 1 1 1 1 1 1
+      1 1 1 1 1 1 1 1 1 1 1 1
+      1 1 1 1 1 1 1 1 1 1 1 1
+
+  lattice LATNE
+      1 1 1 2 2 2 2 2 2 2 2 2
+      1 1 1 1 1 2 2 2 2 2 2 2
+      1 1 1 1 1 1 1 2 2 2 2 2
+      1 1 1 1 1 1 1 1 2 2 2 2
+      1 1 1 1 1 1 1 1 1 2 2 2
+      1 1 1 1 1 1 1 1 1 1 2 2
+      1 1 1 1 1 1 1 1 1 1 2 2
+      1 1 1 1 1 1 1 1 1 1 1 2
+      1 1 1 1 1 1 1 1 1 1 1 2
+      1 1 1 1 1 1 1 1 1 1 1 1
+      1 1 1 1 1 1 1 1 1 1 1 1
+      1 1 1 1 1 1 1 1 1 1 1 1
+
+  lattice LATSW
+      1 1 1 1 1 1 1 1 1 1 1 1
+      1 1 1 1 1 1 1 1 1 1 1 1
+      1 1 1 1 1 1 1 1 1 1 1 1
+      2 1 1 1 1 1 1 1 1 1 1 1
+      2 1 1 1 1 1 1 1 1 1 1 1
+      2 2 1 1 1 1 1 1 1 1 1 1
+      2 2 1 1 1 1 1 1 1 1 1 1
+      2 2 2 1 1 1 1 1 1 1 1 1
+      2 2 2 2 1 1 1 1 1 1 1 1
+      2 2 2 2 2 1 1 1 1 1 1 1
+      2 2 2 2 2 2 2 1 1 1 1 1
+      2 2 2 2 2 2 2 2 2 2 1 1
+
+  lattice LATSE
+      1 1 1 1 1 1 1 1 1 1 1 1
+      1 1 1 1 1 1 1 1 1 1 1 1
+      1 1 1 1 1 1 1 1 1 1 1 1
+      1 1 1 1 1 1 1 1 1 1 1 2
+      1 1 1 1 1 1 1 1 1 1 1 2
+      1 1 1 1 1 1 1 1 1 1 2 2
+      1 1 1 1 1 1 1 1 1 1 2 2
+      1 1 1 1 1 1 1 1 1 2 2 2
+      1 1 1 1 1 1 1 1 2 2 2 2
+      1 1 1 1 1 1 1 2 2 2 2 2
+      1 1 1 1 1 2 2 2 2 2 2 2
+      1 1 1 2 2 2 2 2 2 2 2 2
+
+  axial  ANW  0.0  LATNW  1.0
+  axial  ANE  0.0  LATNE  1.0
+  axial  ASW  0.0  LATSW  1.0
+  axial  ASE  0.0  LATSE  1.0
+
+[MPACT]
+  include mpact_options.inc
+  axial_buckling    0.00041   ! core 1
+
+  num_space         16
+  par_method        EXPLICITRADIAL
+  par_map
+     1  1  2  2  3  3  4  4
+     1  1  2  2  3  3  4  4
+     5  5  6  6  7  7  8  8
+     5  5  6  6  7  7  8  8
+     9  9 10 10 11 11 12 12
+     9  9 10 10 11 11 12 12
+    13 13 14 14 15 15 16 16
+    13 13 14 14 15 15 16 16
+
+
