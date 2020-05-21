@@ -8,12 +8,12 @@ B&W results published in CASL Report:
 
     MPACT Validation with Critical Experiments
     Scott Palmtag and Shane Stimpson
-    CASL-U-2017-1388-000
-    July 17, 2017
+    CASL-U-2017-1388-001
+    August 20, 2019
 
 ## IPEN Results
 
-IPEN results to be published:
+IPEN and B&W results to be published:
 
     "VERA-CS Validation of Critical Experiments"
     Vincent Novellino and Scott Palmtag
