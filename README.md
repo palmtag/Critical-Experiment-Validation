@@ -13,12 +13,17 @@ B&W results published in CASL Report:
 
 ## IPEN Results
 
-IPEN and B&W results to be published:
+IPEN and B&W results published:
 
+    Vincent Novellino and Scott Palmtag,
     "VERA-CS Validation of Critical Experiments"
-    Vincent Novellino and Scott Palmtag
-    accepted to: PHYSOR 2020   
+    PHYSOR 2020, Cambridge, United Kingdom, March 29-April 2, 2020
+    https://www.physor2020.com
 
- (https://www.physor2020.com)
+Also
 
+   V. Novellino and S. Palmtag,
+   "VERA-CS VALIDATION OF CRITICAL EXPERIMENTS"
+   EPJ Web of Conferences, 247, 10014. (2021)
+   https://doi.org/10.1051/epjconf/202124710014
 
