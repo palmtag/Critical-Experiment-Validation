@@ -22,8 +22,8 @@ IPEN and B&W results published:
 
 Also
 
-   V. Novellino and S. Palmtag,
-   "VERA-CS VALIDATION OF CRITICAL EXPERIMENTS"
-   EPJ Web of Conferences, 247, 10014. (2021)
-   https://doi.org/10.1051/epjconf/202124710014
+    V. Novellino and S. Palmtag,
+    "VERA-CS VALIDATION OF CRITICAL EXPERIMENTS"
+    EPJ Web of Conferences, 247, 10014. (2021)
+    https://doi.org/10.1051/epjconf/202124710014
 
